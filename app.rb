@@ -1,16 +1,17 @@
-require_relative 'config/environment'
+require_relative "config/environment"
 
 class App < Sinatra::Base
-  get '/reverse' do
+  get "/reverse" do
     erb :reverse
   end
 
-  post '/reverse' do
+  post "/reverse" do
     erb :reversed
   end
 
-  get '/friends' do
+  get "/friends" do
+    @friends = ["Emily Wilding Davison", "Harriet Tubman", "Joan of Arc", "Malala Yousafzai", "Sojourner Truth"]
     # Write your code here!
-
+    erb :friends
   end
 end
